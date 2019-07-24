@@ -1,0 +1,9 @@
+node {
+    stage ("SCM checkout-1"){
+        git 'https://github.com/bikramk060/Project_Java'
+    }
+    stage ("Execution"){
+        sh label: '', script: '''javac *.java
+java Javasample'''
+    }
+}
